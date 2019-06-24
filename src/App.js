@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import assets from './components/assets';
+import Cards from './components/Cards';
+class App extends React.Component {
+  state = {
+    assets,
+    card_size: 'Medium'
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      card_size: e.target.value
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div>
+          <label for="inputState">Card Size</label>
+          <select class="form-control" onChange={this.handleChange}>
+            <option>Large</option>
+            <option>Medium</option>
+            <option>Small</option>
+          </select>
+        </div>
+        <Cards assets={this.state.assets} card_size={this.state.card_size} />
+      </div>
+    );
+  }
 }
 
 export default App;

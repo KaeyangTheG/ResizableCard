@@ -1,0 +1,32 @@
+.Medium{
+    width: 15%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: "space-between";
+    margin-right: 1%;
+    margin-top: 1%;
+    background-color: #353b48;
+}
+
+.Large{
+    width: 30%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: "space-between";
+    margin-right: 1%;
+    margin-top: 1%;
+    background-color: #353b48;
+}
+
+.Small{
+    width: 10%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: "space-between";
+    margin-right: 1%;
+    margin-top: 1%;
+    background-color: #353b48;
+}
